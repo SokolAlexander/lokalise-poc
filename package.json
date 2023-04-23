@@ -2,13 +2,16 @@
   "name": "next-lokalise",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-transls": "lokalise2 --token 05d8695676931672144a162c9ac654a9a7872ad5 --project-id 649483346444ebe890a8e5.91638700 file download --format json --original-filenames=true --unzip-to \"./public/locales/\""
   },
   "dependencies": {
+    "@lokalise/node-api": "^9.8.0",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
